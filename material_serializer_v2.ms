@@ -1,19 +1,22 @@
 /*
- * Material Library Serializer v2 — dotNet Edition
+ * Material Library Serializer v2 — YAML Edition
  *
  * Reads a .mat material library and serializes each top-level material
- * to an individual JSON file with full property data, including
+ * to an individual YAML file with full property data, including
  * recursive serialization of sub-materials and texture maps.
  *
- * Uses .NET Framework's JavaScriptSerializer (System.Web.Extensions)
- * for JSON generation, eliminating manual string escaping. Builds
- * dotNet Dictionary/ArrayList object trees, serializes to compact JSON,
- * then pretty-prints via a StringStream-based formatter.
+ * Pure MaxScript — no dotNet dependency. Works on any 3ds Max version.
+ * Uses StringStream for output (avoids O(n^2) string concatenation).
+ *
+ * Output format:
+ *   - Simple properties are inline flow mappings: {type: float, value: 1.0}
+ *   - Materials/maps are block mappings with class, name, properties
+ *   - Arrays are block sequences with - prefix
  *
  * Usage:
  *   1. Set material_library and output_dir below
  *   2. Run script in 3ds Max (MAXScript > Run Script)
- *   3. Check output_dir for generated .json files
+ *   3. Check output_dir for generated .yaml files
  *
  * Supports all material and map types including V-Ray.
  *
@@ -21,8 +24,6 @@
  *   - Animation data (keyframes, controllers) not captured
  *   - Instance relationships between shared maps not preserved
  *   - Custom attributes not serialized
- *   - Requires .NET Framework 4.x (3ds Max 2018–2024)
- *   - 3ds Max 2025+ may use .NET 6+ where JavaScriptSerializer is unavailable
  *
  * Supported: 3ds Max 2018+
  */
@@ -64,266 +65,268 @@ fn sanitizeFilename name = (
 
 struct MaterialSerializerV2 (
 	maxDepth = 20,
-	_serializer = undefined,
-	_assemblyLoaded = false,
-
-	-- Create an ArrayList from a MaxScript array of values.
-	fn makeList items = (
-		local a = dotNetObject "System.Collections.ArrayList"
-		for item in items do a.Add item
-		a
-	),
-
-	-- Create a Dictionary[String,Object] from #(#("key",val), ...) pairs.
-	-- Pairs where val is undefined use the indexer to store CLR null,
-	-- since MaxScript cannot pass null directly to Dictionary.Add.
-	fn makeDict pairs = (
-		local d = dotNetObject "System.Collections.Generic.Dictionary`2[System.String,System.Object]"
-		for pair in pairs do (
-			if pair[2] == undefined then
-				d.Item[pair[1]] = undefined
-			else
-				d.Add pair[1] pair[2]
-		)
-		d
-	),
-
-	-- Guard against non-finite float values (INF, NaN) that would cause
-	-- JavaScriptSerializer to throw. Returns the raw float for normal values,
-	-- or its string representation for special values.
-	fn guardFloat val = (
-		local s = val as string
-		if findString s "#INF" != undefined \
-			or findString s "#IND" != undefined \
-			or findString s "#QNAN" != undefined then
-			s
-		else
-			val
-	),
-
-	-- Load System.Web.Extensions and create the JavaScriptSerializer.
-	-- Returns true on success, false on failure.
-	fn ensureAssembly = (
-		if _assemblyLoaded then return true
-		try (
-			dotNet.loadAssembly "System.Web.Extensions"
-			_serializer = dotNetObject "System.Web.Script.Serialization.JavaScriptSerializer"
-			_serializer.MaxJsonLength = 104857600  -- 100 MB
-			_assemblyLoaded = true
-			true
-		) catch (
-			format "FATAL: Could not load System.Web.Extensions assembly.\n"
-			format "       Requires .NET Framework 4.x (3ds Max 2018-2024).\n"
-			format "       Error: %\n" (try (getCurrentException()) catch ("unknown"))
-			false
-		)
-	),
 
 	-- Write indentation (2 spaces per level) to a StringStream.
-	fn writeIndent stream level = (
-		for j = 1 to level do format "  " to:stream
+	fn writeIndent ss level = (
+		for j = 1 to level do format "  " to:ss
 	),
 
-	-- Pretty-print compact JSON into indented, readable format.
-	-- Character-by-character state machine with StringStream output.
-	fn prettyPrint jsonStr = (
-		local out = StringStream ""
-		local depth = 0
-		local inStr = false
-		local esc = false
-		local skipNext = false
-
-		for i = 1 to jsonStr.count do (
-			if skipNext then (
-				skipNext = false
-			) else if esc then (
-				format "%" jsonStr[i] to:out
-				esc = false
-			) else if inStr then (
-				local c = jsonStr[i]
-				format "%" c to:out
-				if c == "\\" then esc = true
-				else if c == "\"" then inStr = false
-			) else (
-				local c = jsonStr[i]
-				local nextChar = if i < jsonStr.count then jsonStr[i + 1] else ""
-
-				if c == "\"" then (
-					format "\"" to:out
-					inStr = true
-				)
-				else if c == "{" then (
-					if nextChar == "}" then (
-						format "{}" to:out
-						skipNext = true
-					) else (
-						depth += 1
-						format "{\n" to:out
-						writeIndent out depth
-					)
-				)
-				else if c == "}" then (
-					depth -= 1
-					format "\n" to:out
-					writeIndent out depth
-					format "}" to:out
-				)
-				else if c == "[" then (
-					if nextChar == "]" then (
-						format "[]" to:out
-						skipNext = true
-					) else (
-						depth += 1
-						format "[\n" to:out
-						writeIndent out depth
-					)
-				)
-				else if c == "]" then (
-					depth -= 1
-					format "\n" to:out
-					writeIndent out depth
-					format "]" to:out
-				)
-				else if c == "," then (
-					format ",\n" to:out
-					writeIndent out depth
-				)
-				else if c == ":" then (
-					format ": " to:out
-				)
-				else (
-					-- Skip whitespace outside strings
-					if c != " " and c != "\n" and c != "\r" and c != "\t" then
-						format "%" c to:out
-				)
-			)
+	-- Write a YAML double-quoted string with backslash escaping.
+	-- Handles \, ", newlines, carriage returns, and tabs.
+	fn writeQuoted ss str = (
+		local s = str as string
+		format "\"" to:ss
+		for i = 1 to s.count do (
+			local c = s[i]
+			if c == "\\" then format "\\\\" to:ss
+			else if c == "\"" then format "\\\"" to:ss
+			else if c == "\n" then format "\\n" to:ss
+			else if c == "\r" then format "\\r" to:ss
+			else if c == "\t" then format "\\t" to:ss
+			else format "%" c to:ss
 		)
-		out as string
+		format "\"" to:ss
 	),
 
-	-- Recursively convert a MaxScript value to a dotNet object tree
-	-- (Dictionary, ArrayList, or boxed primitives) for JavaScriptSerializer.
-	fn convertValue val depth = (
-		-- Depth guard against circular references
-		if depth > maxDepth then
-			return (makeDict #(#("type", "max_depth"), #("value", undefined)))
+	-- Returns true if a float is non-finite (INF, NaN, IND).
+	-- These need special handling since they aren't valid YAML numbers.
+	fn isSpecialFloat val = (
+		local s = val as string
+		findString s "#INF" != undefined \
+			or findString s "#IND" != undefined \
+			or findString s "#QNAN" != undefined
+	),
 
+	-- Returns true if a value can be written as a single-line flow mapping.
+	-- Materials, TextureMaps, and non-empty Arrays require block style.
+	fn isInlinable val = (
+		if isKindOf val Material then return false
+		if isKindOf val TextureMap then return false
+		if isKindOf val Array and val.count > 0 then return false
+		true
+	),
+
+	-- Write a typed value as an inline YAML flow mapping: {type: X, value: Y}
+	-- Does NOT write leading indentation or trailing newline — caller handles those.
+	fn writeInline val ss = (
 		-- Undefined / unsupplied
-		if val == undefined or val == unsupplied then
-			return (makeDict #(#("type", "undefined"), #("value", undefined)))
+		if val == undefined or val == unsupplied then (
+			format "{type: undefined, value: null}" to:ss
+			return OK
+		)
 
 		local cls = classOf val
 
 		-- Integer
-		if cls == Integer then
-			return (makeDict #(#("type", "integer"), #("value", val)))
+		if cls == Integer then (
+			format "{type: integer, value: %}" val to:ss
+			return OK
+		)
 
-		-- Float (with INF/NaN guard)
-		if cls == Float then
-			return (makeDict #(#("type", "float"), #("value", guardFloat val)))
+		-- Float
+		if cls == Float then (
+			if isSpecialFloat val then (
+				-- Non-finite floats stored as quoted strings for valid YAML
+				format "{type: float, value: " to:ss
+				writeQuoted ss (val as string)
+				format "}" to:ss
+			) else (
+				format "{type: float, value: %}" val to:ss
+			)
+			return OK
+		)
 
 		-- Boolean
-		if cls == BooleanClass then
-			return (makeDict #(#("type", "boolean"), #("value", val)))
+		if cls == BooleanClass then (
+			format "{type: boolean, value: %}" (if val then "true" else "false") to:ss
+			return OK
+		)
 
-		-- String (escaping handled entirely by JavaScriptSerializer)
-		if cls == String then
-			return (makeDict #(#("type", "string"), #("value", val)))
+		-- String
+		if cls == String then (
+			format "{type: string, value: " to:ss
+			writeQuoted ss val
+			format "}" to:ss
+			return OK
+		)
 
 		-- Name (#symbol → string)
-		if cls == Name then
-			return (makeDict #(#("type", "name"), #("value", val as string)))
+		if cls == Name then (
+			format "{type: name, value: " to:ss
+			writeQuoted ss (val as string)
+			format "}" to:ss
+			return OK
+		)
 
 		-- Color (RGBA, 0–255)
-		if cls == Color then
-			return (makeDict #(#("type", "color"), #("value", makeList #(val.r, val.g, val.b, val.a))))
+		if cls == Color then (
+			format "{type: color, value: [%, %, %, %]}" val.r val.g val.b val.a to:ss
+			return OK
+		)
 
 		-- Point2
-		if cls == Point2 then
-			return (makeDict #(#("type", "point2"), #("value", makeList #(val.x, val.y))))
+		if cls == Point2 then (
+			format "{type: point2, value: [%, %]}" val.x val.y to:ss
+			return OK
+		)
 
 		-- Point3
-		if cls == Point3 then
-			return (makeDict #(#("type", "point3"), #("value", makeList #(val.x, val.y, val.z))))
+		if cls == Point3 then (
+			format "{type: point3, value: [%, %, %]}" val.x val.y val.z to:ss
+			return OK
+		)
 
 		-- Point4
-		if cls == Point4 then
-			return (makeDict #(#("type", "point4"), #("value", makeList #(val.x, val.y, val.z, val.w))))
+		if cls == Point4 then (
+			format "{type: point4, value: [%, %, %, %]}" val.x val.y val.z val.w to:ss
+			return OK
+		)
 
 		-- Matrix3 (3 rotation rows + position row)
 		if cls == Matrix3 then (
 			local r1 = val.row1; local r2 = val.row2
 			local r3 = val.row3; local r4 = val.row4
-			return (makeDict #(#("type", "matrix3"), #("value", makeList #(
-				makeList #(r1.x, r1.y, r1.z),
-				makeList #(r2.x, r2.y, r2.z),
-				makeList #(r3.x, r3.y, r3.z),
-				makeList #(r4.x, r4.y, r4.z)
-			))))
-		)
-
-		-- Material or TextureMap — full recursive property serialization
-		if isKindOf val Material or isKindOf val TextureMap then (
-			local matName = try (val.name) catch ("")
-			local propsDict = dotNetObject "System.Collections.Generic.Dictionary`2[System.String,System.Object]"
-
-			local props = #()
-			try (props = getPropNames val) catch ()
-
-			for i = 1 to props.count do (
-				local pName = props[i] as string
-				try (
-					local pVal = getProperty val props[i]
-					propsDict.Add pName (convertValue pVal (depth + 1))
-				) catch (
-					local errMsg = try (getCurrentException()) catch ("unknown error")
-					propsDict.Add pName (makeDict #(#("type", "error"), #("value", errMsg)))
-				)
-			)
-
-			return (makeDict #(
-				#("class", classOf val as string),
-				#("name", matName),
-				#("properties", propsDict)
-			))
-		)
-
-		-- Array / ArrayParameter
-		if isKindOf val Array then (
-			local arrList = dotNetObject "System.Collections.ArrayList"
-			for item in val do
-				arrList.Add (convertValue item (depth + 1))
-			return arrList
+			format "{type: matrix3, value: [" to:ss
+			format "[%, %, %], " r1.x r1.y r1.z to:ss
+			format "[%, %, %], " r2.x r2.y r2.z to:ss
+			format "[%, %, %], " r3.x r3.y r3.z to:ss
+			format "[%, %, %]]}" r4.x r4.y r4.z to:ss
+			return OK
 		)
 
 		-- BitArray
 		if cls == BitArray then (
-			local bitList = dotNetObject "System.Collections.ArrayList"
-			for bit in val do bitList.Add bit
-			return (makeDict #(#("type", "bitarray"), #("value", bitList)))
+			format "{type: bitarray, value: [" to:ss
+			local first = true
+			for bit in val do (
+				if not first then format ", " to:ss
+				format "%" bit to:ss
+				first = false
+			)
+			format "]}" to:ss
+			return OK
+		)
+
+		-- Empty array (non-empty handled by writeBlock)
+		if isKindOf val Array then (
+			format "[]" to:ss
+			return OK
 		)
 
 		-- Other numeric types (Double, Integer64) via superclass
-		if superClassOf val == Number then
-			return (makeDict #(#("type", toLower (cls as string)), #("value", val)))
+		if superClassOf val == Number then (
+			format "{type: %, value: %}" (toLower (cls as string)) val to:ss
+			return OK
+		)
 
-		-- Fallback: unknown type — store class name and string representation
+		-- Fallback: unknown type
 		local valStr = try (val as string) catch ("<<cannot convert to string>>")
-		makeDict #(#("type", "unknown"), #("class", cls as string), #("value", valStr))
+		format "{type: unknown, class: " to:ss
+		writeQuoted ss (cls as string)
+		format ", value: " to:ss
+		writeQuoted ss valStr
+		format "}" to:ss
 	),
 
-	-- Serialize a material to a pretty-printed JSON file on disk.
-	fn serializeToFile mat filepath = (
-		if not ensureAssembly() then return false
+	-- Write a value as block-style YAML (materials/maps and non-empty arrays).
+	-- Each output line starts with indentation at the given depth.
+	-- Self-recursive for nested materials and arrays.
+	fn writeBlock val depth ss = (
+		-- Depth guard against circular references
+		if depth > maxDepth then (
+			writeIndent ss depth
+			format "{type: max_depth, value: null}\n" to:ss
+			return OK
+		)
 
+		-- Material or TextureMap — block mapping with class, name, properties
+		if isKindOf val Material or isKindOf val TextureMap then (
+			local matName = try (val.name) catch ("")
+
+			writeIndent ss depth
+			format "class: " to:ss
+			writeQuoted ss (classOf val as string)
+			format "\n" to:ss
+
+			writeIndent ss depth
+			format "name: " to:ss
+			writeQuoted ss matName
+			format "\n" to:ss
+
+			local props = #()
+			try (props = getPropNames val) catch ()
+
+			if props.count == 0 then (
+				writeIndent ss depth
+				format "properties: {}\n" to:ss
+			) else (
+				writeIndent ss depth
+				format "properties:\n" to:ss
+
+				for i = 1 to props.count do (
+					local pName = props[i] as string
+					writeIndent ss (depth + 1)
+
+					try (
+						local pVal = getProperty val props[i]
+
+						if isInlinable pVal then (
+							-- Inline: key + flow mapping on one line
+							format "%: " pName to:ss
+							writeInline pVal ss
+							format "\n" to:ss
+						) else (
+							-- Block: key on its own line, content indented below
+							format "%:\n" pName to:ss
+							writeBlock pVal (depth + 2) ss
+						)
+					) catch (
+						local errMsg = try (getCurrentException()) catch ("unknown error")
+						format "%: {type: error, value: " pName to:ss
+						writeQuoted ss errMsg
+						format "}\n" to:ss
+					)
+				)
+			)
+			return OK
+		)
+
+		-- Array — block sequence with - prefix per item
+		if isKindOf val Array then (
+			for i = 1 to val.count do (
+				local item = val[i]
+				writeIndent ss depth
+
+				if isInlinable item then (
+					-- Inline item on same line as -
+					format "- " to:ss
+					writeInline item ss
+					format "\n" to:ss
+				) else (
+					-- Block item: - on its own line, content indented below
+					format "-\n" to:ss
+					writeBlock item (depth + 1) ss
+				)
+			)
+			return OK
+		)
+
+		-- Fallback: write inline anyway (shouldn't normally reach here)
+		writeIndent ss depth
+		writeInline val ss
+		format "\n" to:ss
+	),
+
+	-- Serialize a material to a YAML file on disk.
+	fn serializeToFile mat filepath = (
 		try (
-			local objTree = convertValue mat 0
-			local compactJson = _serializer.Serialize objTree
-			local prettyJson = prettyPrint compactJson
+			local ss = StringStream ""
+			format "---\n" to:ss
+			writeBlock mat 0 ss
 
 			local f = createFile filepath
 			if f != undefined then (
-				format "%" prettyJson to:f
+				format "%" (ss as string) to:f
 				close f
 				true
 			) else (
@@ -344,7 +347,7 @@ struct MaterialSerializerV2 (
 
 (
 	format "\n========================================\n"
-	format "Material Library Serializer v2 (dotNet)\n"
+	format "Material Library Serializer v2 (YAML)\n"
 	format "========================================\n"
 	format "Library: %\n" material_library
 	format "Output:  %\n" output_dir
@@ -379,7 +382,7 @@ struct MaterialSerializerV2 (
 		for i = 1 to matCount do (
 			local mat = lib[i]
 			local safeName = sanitizeFilename mat.name
-			local filepath = output_dir + safeName + ".json"
+			local filepath = output_dir + safeName + ".yaml"
 			format "[%/%] \"%\"\n" i matCount mat.name
 
 			if serializer.serializeToFile mat filepath then
