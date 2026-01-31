@@ -1,11 +1,11 @@
 /*
- * Material Library Serializer v4 — Prefixed-Key YAML Edition
+ * Material Library Serializer v5 — Prefixed-Key YAML Edition
  *
  * Reads a .mat material library and serializes each top-level material
  * to an individual YAML file with full property data, including
  * recursive serialization of sub-materials and texture maps.
  *
- * v4 change: Nested material/map properties are prefixed with their
+ * v4/v5 change: Nested material/map properties are prefixed with their
  * parent key path (dot-separated). For example, a "clipu" property
  * inside a map stored at "texmap_diffuse" becomes "texmap_diffuse.clipu".
  * A "blur" property inside "coords" inside "texmap_diffuse" becomes
@@ -75,7 +75,7 @@ fn sanitizeFilename name = (
 -- SERIALIZER
 -- ============================================================================
 
-struct MaterialSerializerV4 (
+struct MaterialSerializerV5 (
 	maxDepth = 20,
 
 	-- Write indentation (2 spaces per level) to a StringStream.
@@ -359,11 +359,11 @@ struct MaterialSerializerV4 (
 -- MAIN
 -- ============================================================================
 
-(
+fn runMaterialSerializerV5 = (
 	-- Step 1: Ask whether to load a specific library or use the current one
 	local loadNew = queryBox \
 		"Do you want to load a specific .mat library?\n\nClick \"No\" to use the library currently loaded in the scene." \
-		title:"Material Serializer v4" beep:false
+		title:"Material Serializer v5" beep:false
 
 	if loadNew then (
 		local matFile = getOpenFileName caption:"Select Material Library (.mat)" \
@@ -382,7 +382,7 @@ struct MaterialSerializerV4 (
 	local matCount = lib.count
 
 	if matCount == 0 then (
-		messageBox "No materials found in the current library.\nLoad a library first or select a .mat file." title:"Material Serializer v4"
+		messageBox "No materials found in the current library.\nLoad a library first or select a .mat file." title:"Material Serializer v5"
 		format "No materials to process. Aborting.\n"
 		return OK
 	)
@@ -399,7 +399,7 @@ struct MaterialSerializerV4 (
 	-- Step 3: Confirm before running
 	local proceed = queryBox \
 		("Ready to serialize " + matCount as string + " material(s) to:\n" + output_dir + "\n\nDo you want to run the script now?") \
-		title:"Material Serializer v4" beep:false
+		title:"Material Serializer v5" beep:false
 
 	if not proceed then (
 		format "Cancelled by user.\n"
@@ -408,7 +408,7 @@ struct MaterialSerializerV4 (
 
 	-- Run serialization
 	format "\n========================================\n"
-	format "Material Library Serializer v4 (YAML — Prefixed Keys)\n"
+	format "Material Library Serializer v5 (YAML — Prefixed Keys)\n"
 	format "========================================\n"
 	format "Output:  %\n" output_dir
 	format "========================================\n\n"
@@ -418,7 +418,7 @@ struct MaterialSerializerV4 (
 	if output_dir.count > 0 and output_dir[output_dir.count] != "\\" and output_dir[output_dir.count] != "/" then
 		output_dir += "\\"
 
-	local serializer = MaterialSerializerV4()
+	local serializer = MaterialSerializerV5()
 	local successCount = 0
 	local failCount = 0
 
@@ -438,3 +438,5 @@ struct MaterialSerializerV4 (
 	format "Complete: % succeeded, % failed\n" successCount failCount
 	format "========================================\n"
 )
+
+runMaterialSerializerV5()
