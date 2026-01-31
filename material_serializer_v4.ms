@@ -89,20 +89,17 @@ struct MaterialSerializerV4 (
 		for j = 1 to level do format "  " to:ss
 	),
 
-	-- Write a YAML double-quoted string with backslash escaping.
+	-- Write a YAML single-quoted string (backslashes are literal).
+	-- Only escaping needed: single quotes are doubled ('').
 	fn writeQuoted ss str = (
 		local s = str as string
-		format "\"" to:ss
+		format "'" to:ss
 		for i = 1 to s.count do (
 			local c = s[i]
-			if c == "\\" then format "\\\\" to:ss
-			else if c == "\"" then format "\\\"" to:ss
-			else if c == "\n" then format "\\n" to:ss
-			else if c == "\r" then format "\\r" to:ss
-			else if c == "\t" then format "\\t" to:ss
+			if c == "'" then format "''" to:ss
 			else format "%" c to:ss
 		)
-		format "\"" to:ss
+		format "'" to:ss
 	),
 
 	-- Map a MaxScript special float to its YAML representation.
