@@ -1,6 +1,16 @@
-# 3dsmax-scripts
+# 3DS Max material export scripts
 
 MaxScript tools and automation scripts for Autodesk 3ds Max with V-Ray.
+
+## Quick Start
+
+1. Download the v5 script, as the most human-friendly. Note the download location.
+2. Make sure you have created a folder where the exported material data will be saved in `*.yaml` format.
+3. Open 3ds Max.
+4. Open the Scripting Listener: press **F11**, or go to **Scripting > Script Listener** in the top menu. Clear any previous logs by right-clicking and selecting **Clear All**. Keep this window open.
+5. Go to **Scripting > Run Script** in the top menu and follow the on-screen instructions.
+6. Watch the logs in the Scripting Listener for progress.
+7. Once the process is complete, the exported material data will be in your chosen output folder.
 
 ## Scripts
 
