@@ -1,0 +1,293 @@
+== Background_for_115456-Swiss_APVs_Wall ==
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Background_for_115456-Swiss APVs_Wall_internal\Textures\Background_for_115456-Swiss APVs_Wall_Plaster 87_internal_diffuse.png
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Background_for_115456-Swiss APVs_Wall_internal\Textures\Background_for_115456-Swiss APVs_Wall_Plaster 87_internal_diffuse.png
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Background_for_115456-Swiss APVs_Wall_internal\Textures\Background_for_115456-Swiss APVs_Wall_Plaster 87_internal_Normal.png
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Background_for_115456-Swiss APVs_Wall_internal\Textures\Background_for_115456-Swiss APVs_Wall_Plaster 87_internal_Normal.png
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Background_for_115456-Swiss APVs_Wall_internal\Textures\Background_for_115456-Swiss APVs_Wall_Plaster 87_internal_R G.png
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Background_for_115456-Swiss APVs_Wall_internal\Textures\Background_for_115456-Swiss APVs_Wall_Plaster 87_internal_R G.png
+
+
+== Graphic_Grey_Matt_268_xx ==
+  [HDRIMapName] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Grey_Matt_268_xx\Textures\Graphic_Grey_Matt_268_xx_RW_base.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Grey_Matt_268_xx\Textures\Graphic_Grey_Matt_268_xx_RW_base.exr
+
+  [HDRIMapName] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Grey_Matt_268_xx\Textures\Graphic_Grey_Matt_268_xx_normal.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Grey_Matt_268_xx\Textures\Graphic_Grey_Matt_268_xx_normal.exr
+
+  [HDRIMapName] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Grey_Matt_268_xx\Textures\Graphic_Grey_Matt_268_xx_RW_roughness.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Grey_Matt_268_xx\Textures\Graphic_Grey_Matt_268_xx_RW_roughness.exr
+
+  [HDRIMapName] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Grey_Matt_268_xx\Textures\Graphic_Grey_Matt_268_xx_RW_metallic.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Grey_Matt_268_xx\Textures\Graphic_Grey_Matt_268_xx_RW_metallic.exr
+
+
+== Matte_LightGrey_229_Carboran_229_xx ==
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Grey_FullGloss_229_xx #20%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_base.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Grey_FullGloss_229_xx #20%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_base.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Grey_FullGloss_229_xx #20%gloss\Textures\Plastic_Grey_FullGloss_229_xx_normal.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Grey_FullGloss_229_xx #20%gloss\Textures\Plastic_Grey_FullGloss_229_xx_normal.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Grey_FullGloss_229_xx #20%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_roughness.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Grey_FullGloss_229_xx #20%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_roughness.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Grey_FullGloss_229_xx #20%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_metallic.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Grey_FullGloss_229_xx #20%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_metallic.exr
+
+
+== Metal_Black_Matt_7832_Variant_Filter4 ==
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_Black_Matt_7832_Variant_Filter4\Textures\Metal_Black_Matt_7832_PowderCoated\Metal_Black_Matt_7832_PowderCoated_RW_base.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_Black_Matt_7832_Variant_Filter4\Textures\Metal_Black_Matt_7832_PowderCoated\Metal_Black_Matt_7832_PowderCoated_RW_base.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_Black_Matt_7832_Variant_Filter4\Textures\Various_xx_xx_xx_Filter4_Hoods\Various_xx_xx_xx_Filter4_Hoods_normal.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_Black_Matt_7832_Variant_Filter4\Textures\Various_xx_xx_xx_Filter4_Hoods\Various_xx_xx_xx_Filter4_Hoods_normal.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_Black_Matt_7832_Variant_Filter4\Textures\Metal_Black_Matt_7832_PowderCoated\Metal_Black_Matt_7832_PowderCoated_RW_roughness.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_Black_Matt_7832_Variant_Filter4\Textures\Metal_Black_Matt_7832_PowderCoated\Metal_Black_Matt_7832_PowderCoated_RW_roughness.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_Black_Matt_7832_Variant_Filter4\Textures\Various_xx_xx_xx_Filter4_Hoods\Various_xx_xx_xx_Filter4_Hoods_opacity.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_Black_Matt_7832_Variant_Filter4\Textures\Various_xx_xx_xx_Filter4_Hoods\Various_xx_xx_xx_Filter4_Hoods_opacity.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_Black_Matt_7832_Variant_Filter4\Textures\Metal_Black_Matt_7832_PowderCoated\Metal_Black_Matt_7832_PowderCoated_RW_metallic.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_Black_Matt_7832_Variant_Filter4\Textures\Metal_Black_Matt_7832_PowderCoated\Metal_Black_Matt_7832_PowderCoated_RW_metallic.exr
+
+
+== Metal_DarkGrey_Matt_239_PowderCoated_MOD ==
+  [HDRIMapName] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_DarkGrey_Matt_239_PowderCoated_MOD\Textures\Metal_DarkGrey_Matt_239_PowderCoated_RW_roughness_2.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_DarkGrey_Matt_239_PowderCoated_MOD\Textures\Metal_DarkGrey_Matt_239_PowderCoated_RW_roughness_2.exr
+
+
+== Metal_StainlessSteel_HighGloss_xx_xx ==
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_RW_base.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_RW_base.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_normal.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_normal.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_RW_roughness.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_RW_roughness.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_anistropy.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_anistropy.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_RW_metallic.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_RW_metallic.exr
+
+
+== Metal_StainlessSteel_InfiniteBrushed_xx_2433h_NoCoating ==
+  [HDRIMapName] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_Brushed_xx_2433h_NoCoating\Textures\Metal_StainlessSteel_InfiniteBrushed_xx_2433h_NoCoating_RW_roughness.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_Brushed_xx_2433h_NoCoating\Textures\Metal_StainlessSteel_InfiniteBrushed_xx_2433h_NoCoating_RW_roughness.exr
+
+
+== Metal_StainlessSteel_Matt_304_Variant_Filter4 ==
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_base.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_base.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Various_xx_xx_xx_Filter4_Hoods\Various_xx_xx_xx_Filter4_Hoods_normal.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Various_xx_xx_xx_Filter4_Hoods\Various_xx_xx_xx_Filter4_Hoods_normal.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_roughness.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_roughness.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Various_xx_xx_xx_Filter4_Hoods\Various_xx_xx_xx_Filter4_Hoods_opacity.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Various_xx_xx_xx_Filter4_Hoods\Various_xx_xx_xx_Filter4_Hoods_opacity.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_metallic.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_metallic.exr
+
+
+== Metal_StainlessSteel_Matt_304_xx ==
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_base.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_base.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_normal.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_normal.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_roughness.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_roughness.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_metallic.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_metallic.exr
+
+
+== Plastic_Black_Matt_7802_PCICE ==
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Black_Matt_7802_PCICE\Textures\Plastic_Black_Matt_7802_PCICE_RW_base.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Black_Matt_7802_PCICE\Textures\Plastic_Black_Matt_7802_PCICE_RW_base.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Black_Matt_7802_PCICE\Textures\Plastic_Black_Matt_7802_PCICE_normal.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Black_Matt_7802_PCICE\Textures\Plastic_Black_Matt_7802_PCICE_normal.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Black_Matt_7802_PCICE\Textures\Plastic_Black_Matt_7802_PCICE_RW_roughness.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Black_Matt_7802_PCICE\Textures\Plastic_Black_Matt_7802_PCICE_RW_roughness.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Black_Matt_7802_PCICE\Textures\Plastic_Black_Matt_7802_PCICE_RW_metallic.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Black_Matt_7802_PCICE\Textures\Plastic_Black_Matt_7802_PCICE_RW_metallic.exr
+
+
+== Plastic_Grey_FullGloss_229_xx_#60%gloss ==
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Grey_FullGloss_229_xx #60%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_base.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Grey_FullGloss_229_xx #60%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_base.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Grey_FullGloss_229_xx #60%gloss\Textures\Plastic_Grey_FullGloss_229_xx_normal.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Grey_FullGloss_229_xx #60%gloss\Textures\Plastic_Grey_FullGloss_229_xx_normal.exr
+
+  [filename] [ERROR]
+  OLD: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___material_library_internal\Plastic_Grey_FullGloss_229_xx #60%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_metallic.exr
+  NEW: C:\Volumes\egpluswarsaw\alfa\Electrolux\Print\__CGI\___MLI\Plastic_Grey_FullGloss_229_xx #60%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_metallic.exr
+
+
+== Plastic_Silver_HighGloss_292_xx ==
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_Silver_HighGloss_292_xx\Textures\Plastic_Silver_HighGloss_292_xx_normal.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_Silver_HighGloss_292_xx\Textures\Plastic_Silver_HighGloss_292_xx_normal.exr
+
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_Silver_HighGloss_292_xx\Textures\Plastic_Silver_HighGloss_292_xx_RW_roughness.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_Silver_HighGloss_292_xx\Textures\Plastic_Silver_HighGloss_292_xx_RW_roughness.exr
+
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_Silver_HighGloss_292_xx\Textures\Plastic_Silver_HighGloss_292_xx_RW_metallic.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_Silver_HighGloss_292_xx\Textures\Plastic_Silver_HighGloss_292_xx_RW_metallic.exr
+
+
+== Plastic_Silver_HighGloss_7957_xx ==
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_Silver_HighGloss_7957_xx\Textures\Plastic_Silver_HighGloss_7957_xx_RW_base.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_Silver_HighGloss_7957_xx\Textures\Plastic_Silver_HighGloss_7957_xx_RW_base.exr
+
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_Silver_HighGloss_7957_xx\Textures\Plastic_Silver_HighGloss_7957_xx_normal.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_Silver_HighGloss_7957_xx\Textures\Plastic_Silver_HighGloss_7957_xx_normal.exr
+
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_Silver_HighGloss_7957_xx\Textures\Plastic_Silver_HighGloss_7957_xx_RW_roughness.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_Silver_HighGloss_7957_xx\Textures\Plastic_Silver_HighGloss_7957_xx_RW_roughness.exr
+
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_Silver_HighGloss_7957_xx\Textures\Plastic_Silver_HighGloss_7957_xx_RW_metallic.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_Silver_HighGloss_7957_xx\Textures\Plastic_Silver_HighGloss_7957_xx_RW_metallic.exr
+
+
+== Plastic_SnowWhite_Matt_7823_xx ==
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_SnowWhite_Matt_7823_xx\Textures\Plastic_SnowWhite_Matt_7823_xx_RW_base.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_SnowWhite_Matt_7823_xx\Textures\Plastic_SnowWhite_Matt_7823_xx_RW_base.exr
+
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_SnowWhite_Matt_7823_xx\Textures\Plastic_SnowWhite_Matt_7823_xx_normal.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_SnowWhite_Matt_7823_xx\Textures\Plastic_SnowWhite_Matt_7823_xx_normal.exr
+
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_SnowWhite_Matt_7823_xx\Textures\Plastic_SnowWhite_Matt_7823_xx_RW_roughness.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_SnowWhite_Matt_7823_xx\Textures\Plastic_SnowWhite_Matt_7823_xx_RW_roughness.exr
+
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_SnowWhite_Matt_7823_xx\Textures\Plastic_SnowWhite_Matt_7823_xx_RW_metallic.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_SnowWhite_Matt_7823_xx\Textures\Plastic_SnowWhite_Matt_7823_xx_RW_metallic.exr
+
+
+== Plastic_Transparent_HighGloss_TR226_TintBlue ==
+  [HDRIMapName] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_Transparent_HighGloss_TR226_TintBlue\Textures\Plastic_Transparent_HighGloss_TR226_TintBlue_RW_base.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_Transparent_HighGloss_TR226_TintBlue\Textures\Plastic_Transparent_HighGloss_TR226_TintBlue_RW_base.exr
+
+  [HDRIMapName] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_Transparent_HighGloss_TR226_TintBlue\Textures\Plastic_Transparent_HighGloss_TR226_TintBlue_refract.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_Transparent_HighGloss_TR226_TintBlue\Textures\Plastic_Transparent_HighGloss_TR226_TintBlue_refract.exr
+
+  [HDRIMapName] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_Transparent_HighGloss_TR226_TintBlue\Textures\Plastic_Transparent_HighGloss_TR226_TintBlue_normal.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_Transparent_HighGloss_TR226_TintBlue\Textures\Plastic_Transparent_HighGloss_TR226_TintBlue_normal.exr
+
+  [HDRIMapName] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_Transparent_HighGloss_TR226_TintBlue\Textures\Plastic_Transparent_HighGloss_TR226_TintBlue_RW_roughness.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_Transparent_HighGloss_TR226_TintBlue\Textures\Plastic_Transparent_HighGloss_TR226_TintBlue_RW_roughness.exr
+
+  [HDRIMapName] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_Transparent_HighGloss_TR226_TintBlue\Textures\Plastic_Transparent_HighGloss_TR226_TintBlue_fog_color.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_Transparent_HighGloss_TR226_TintBlue\Textures\Plastic_Transparent_HighGloss_TR226_TintBlue_fog_color.exr
+
+  [HDRIMapName] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Plastic_Transparent_HighGloss_TR226_TintBlue\Textures\Plastic_Transparent_HighGloss_TR226_TintBlue_RW_metallic.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Plastic_Transparent_HighGloss_TR226_TintBlue\Textures\Plastic_Transparent_HighGloss_TR226_TintBlue_RW_metallic.exr
+
+
+== Various_Black_SemiMatt_xx_GreaseFilter ==
+  [HDRIMapName] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Various_Black_SemiMatt_xx_GreaseFilter\Textures\Various_Black_SemiMatt_xx_GreaseFilter_RW_base.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Various_Black_SemiMatt_xx_GreaseFilter\Textures\Various_Black_SemiMatt_xx_GreaseFilter_RW_base.exr
+
+  [HDRIMapName] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Various_Black_SemiMatt_xx_GreaseFilter\Textures\Various_Black_SemiMatt_xx_GreaseFilter_normal.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Various_Black_SemiMatt_xx_GreaseFilter\Textures\Various_Black_SemiMatt_xx_GreaseFilter_normal.exr
+
+  [HDRIMapName] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Various_Black_SemiMatt_xx_GreaseFilter\Textures\Various_Black_SemiMatt_xx_GreaseFilter_RW_rough.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Various_Black_SemiMatt_xx_GreaseFilter\Textures\Various_Black_SemiMatt_xx_GreaseFilter_RW_rough.exr
+
+  [HDRIMapName] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Various_Black_SemiMatt_xx_GreaseFilter\Textures\Various_Black_SemiMatt_xx_GreaseFilter_height.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Various_Black_SemiMatt_xx_GreaseFilter\Textures\Various_Black_SemiMatt_xx_GreaseFilter_height.exr
+
+  [HDRIMapName] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Various_Black_SemiMatt_xx_GreaseFilter\Textures\Various_Black_SemiMatt_xx_GreaseFilter_RW_metallic.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Various_Black_SemiMatt_xx_GreaseFilter\Textures\Various_Black_SemiMatt_xx_GreaseFilter_RW_metallic.exr
+
+
+== Wood_OakWhite_Satin_xx_xx ==
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Wood_OakWhite_Satin_xx_xx\Textures\Wood_OakWhite_Satin_xx_xx_RW_base.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Wood_OakWhite_Satin_xx_xx\Textures\Wood_OakWhite_Satin_xx_xx_RW_base.exr
+
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Wood_OakWhite_Satin_xx_xx\Textures\Wood_OakWhite_Satin_xx_xx_normal.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Wood_OakWhite_Satin_xx_xx\Textures\Wood_OakWhite_Satin_xx_xx_normal.exr
+
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Wood_OakWhite_Satin_xx_xx\Textures\Wood_OakWhite_Satin_xx_xx_RW_roughness.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Wood_OakWhite_Satin_xx_xx\Textures\Wood_OakWhite_Satin_xx_xx_RW_roughness.exr
+
+  [filename] [ERROR]
+  OLD: A:\Electrolux\Print\__CGI\___material_library_internal\Wood_OakWhite_Satin_xx_xx\Textures\Wood_OakWhite_Satin_xx_xx_RW_metallic.exr
+  NEW: A:\Electrolux\Print\__CGI\___MLI\Wood_OakWhite_Satin_xx_xx\Textures\Wood_OakWhite_Satin_xx_xx_RW_metallic.exr
+
