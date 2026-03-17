@@ -1,0 +1,83 @@
+====
+Material: Background_for_115456-Swiss_APVs_Wall
+===
+ERROR: \Background_for_115456-Swiss APVs_Wall_internal\Textures\Background_for_115456-Swiss APVs_Wall_Plaster 87_internal_diffuse.png
+ERROR: \Background_for_115456-Swiss APVs_Wall_internal\Textures\Background_for_115456-Swiss APVs_Wall_Plaster 87_internal_Normal.png
+ERROR: \Background_for_115456-Swiss APVs_Wall_internal\Textures\Background_for_115456-Swiss APVs_Wall_Plaster 87_internal_R G.png
+
+====
+Material: Graphic_Grey_Matt_268_xx
+===
+ERROR: \Plastic_Grey_Matt_268_xx\Textures\Graphic_Grey_Matt_268_xx_RW_base.exr
+ERROR: \Plastic_Grey_Matt_268_xx\Textures\Graphic_Grey_Matt_268_xx_normal.exr
+ERROR: \Plastic_Grey_Matt_268_xx\Textures\Graphic_Grey_Matt_268_xx_RW_roughness.exr
+ERROR: \Plastic_Grey_Matt_268_xx\Textures\Graphic_Grey_Matt_268_xx_RW_metallic.exr
+
+====
+Material: Matte_LightGrey_229_Carboran_229_xx
+===
+ERROR: \Plastic_Grey_FullGloss_229_xx #20%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_base.exr
+ERROR: \Plastic_Grey_FullGloss_229_xx #20%gloss\Textures\Plastic_Grey_FullGloss_229_xx_normal.exr
+ERROR: \Plastic_Grey_FullGloss_229_xx #20%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_roughness.exr
+ERROR: \Plastic_Grey_FullGloss_229_xx #20%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_metallic.exr
+
+====
+Material: Metal_Black_Matt_7832_Variant_Filter4
+===
+ERROR: \Metal_Black_Matt_7832_Variant_Filter4\Textures\Metal_Black_Matt_7832_PowderCoated\Metal_Black_Matt_7832_PowderCoated_RW_base.exr
+ERROR: \Metal_Black_Matt_7832_Variant_Filter4\Textures\Various_xx_xx_xx_Filter4_Hoods\Various_xx_xx_xx_Filter4_Hoods_normal.exr
+ERROR: \Metal_Black_Matt_7832_Variant_Filter4\Textures\Metal_Black_Matt_7832_PowderCoated\Metal_Black_Matt_7832_PowderCoated_RW_roughness.exr
+ERROR: \Metal_Black_Matt_7832_Variant_Filter4\Textures\Various_xx_xx_xx_Filter4_Hoods\Various_xx_xx_xx_Filter4_Hoods_opacity.exr
+ERROR: \Metal_Black_Matt_7832_Variant_Filter4\Textures\Metal_Black_Matt_7832_PowderCoated\Metal_Black_Matt_7832_PowderCoated_RW_metallic.exr
+
+====
+Material: Metal_DarkGrey_Matt_239_PowderCoated_MOD
+===
+ERROR: \Metal_DarkGrey_Matt_239_PowderCoated_MOD\Textures\Metal_DarkGrey_Matt_239_PowderCoated_RW_roughness_2.exr
+
+====
+Material: Metal_StainlessSteel_HighGloss_xx_xx
+===
+ERROR: \Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_RW_base.exr
+ERROR: \Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_normal.exr
+ERROR: \Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_RW_roughness.exr
+ERROR: \Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_anistropy.exr
+ERROR: \Metal_StainlessSteel_HighGloss_xx_xx\Textures\Metal_StainlessSteel_HighGloss_xx_xx_RW_metallic.exr
+
+====
+Material: Metal_StainlessSteel_InfiniteBrushed_xx_2433h_NoCoating
+===
+ERROR: \Metal_StainlessSteel_Brushed_xx_2433h_NoCoating\Textures\Metal_StainlessSteel_InfiniteBrushed_xx_2433h_NoCoating_RW_roughness.exr
+
+====
+Material: Metal_StainlessSteel_Matt_304_Variant_Filter4
+===
+ERROR: \Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_base.exr
+ERROR: \Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Various_xx_xx_xx_Filter4_Hoods\Various_xx_xx_xx_Filter4_Hoods_normal.exr
+ERROR: \Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_roughness.exr
+ERROR: \Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Various_xx_xx_xx_Filter4_Hoods\Various_xx_xx_xx_Filter4_Hoods_opacity.exr
+ERROR: \Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_metallic.exr
+
+====
+Material: Metal_StainlessSteel_Matt_304_xx
+===
+ERROR: \Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_base.exr
+ERROR: \Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_normal.exr
+ERROR: \Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_roughness.exr
+ERROR: \Metal_StainlessSteel_Matt_304_Variant_Filter4\textures\Metal_StainlessSteel_Matt_304_xx\Metal_StainlessSteel_Matt_304_xx_RW_metallic.exr
+
+====
+Material: Plastic_Black_Matt_7802_PCICE
+===
+ERROR: \Plastic_Black_Matt_7802_PCICE\Textures\Plastic_Black_Matt_7802_PCICE_RW_base.exr
+ERROR: \Plastic_Black_Matt_7802_PCICE\Textures\Plastic_Black_Matt_7802_PCICE_normal.exr
+ERROR: \Plastic_Black_Matt_7802_PCICE\Textures\Plastic_Black_Matt_7802_PCICE_RW_roughness.exr
+ERROR: \Plastic_Black_Matt_7802_PCICE\Textures\Plastic_Black_Matt_7802_PCICE_RW_metallic.exr
+
+====
+Material: Plastic_Grey_FullGloss_229_xx_#60%gloss
+===
+ERROR: \Plastic_Grey_FullGloss_229_xx #60%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_base.exr
+ERROR: \Plastic_Grey_FullGloss_229_xx #60%gloss\Textures\Plastic_Grey_FullGloss_229_xx_normal.exr
+ERROR: \Plastic_Grey_FullGloss_229_xx #60%gloss\Textures\Plastic_Grey_FullGloss_229_xx_RW_metallic.exr
+
